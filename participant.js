@@ -2,7 +2,7 @@
 let sleep;
 let a = Math.PI.toString();
 setInterval(()=>a+=a, 1);
-function play(messageEvent){
+function tock(messageEvent){
 	setTimeout(()=>{
 		let length = (messageEvent.data.length/2) - 1;
 		for(let i = 0; 0 < length; i++){
@@ -15,5 +15,5 @@ function play(messageEvent){
 }
 onmessage = messageEvent => {
 	sleep = messageEvent.data.settings.general.timelimit_ms*.9;
-	onmessage = play;
+	onmessage = tock;
 };
